@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Simples - Top Gear (SNES)</title>
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #202020;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #ff0000;
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 30px;
+        }
+
+        .video-section {
+            flex: 2;
+        }
+
+        .video-player {
+            background: #000;
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .video-player span {
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .video-info h1 {
+            font-size: 1.3em;
+            margin: 0 0 10px 0;
+        }
+
+        .video-info p {
+            font-size: 1em;
+            margin: 0 0 10px 0;
+        }
+
+        .video-info ul {
+            margin: 0 0 10px 20px;
+        }
+
+        .video-info table {
+            background: #222;
+            color: #fff;
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .video-info th,
+        .video-info td {
+            border: 1px solid #333;
+            padding: 5px 10px;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        .sidebar h2 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #202020;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="logo">YouTube</span>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Explorar</a>
+            <a href="#">Inscrições</a>
+        </nav>
+    </header>
+    <main>
+        <section class="video-section">
+            <div class="video-player">
+                <!-- Exemplo de vídeo incorporado -->
+                <video width="100%" controls
+                    poster="https://gamefabrique.com/storage/screenshots/snes/top-gear-1-11.png">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento <code>video</code>.
+                </video>
+            </div>
+            <!-- Imagem ilustrativa do vídeo -->
+            <figure style="margin: 10px 0; text-align:center;">
+                <img src="https://gamefabrique.com/storage/screenshots/snes/top-gear-1-11.png" alt="Top Gear SNES"
+                    style="max-width: 80%; border-radius: 8px; box-shadow: 0 2px 8px #0008;">
+                <figcaption style="color:#ccc; font-size:0.95em;">Imagem ilustrativa do jogo Top Gear (SNES)
+                </figcaption>
+            </figure>
+            <section class="video-info">
+                <h1>Top Gear (SNES) - Part 1: USA</h1>
+                <p><strong>Canal:</strong> MetaSmashterGaming</p>
+                <p><strong>Visualizações:</strong> 2,2 mi &nbsp; <strong>Publicado:</strong> há 14 anos</p>
+                <p>Top Gear (SNES) é um clássico dos jogos de corrida, famoso por sua jogabilidade e trilha sonora
+                    marcante. Neste vídeo, confira a primeira pista do jogo!</p>
+                <ul>
+                    <li>Corrida nos EUA</li>
+                    <li>Modo multiplayer</li>
+                    <li>Trilha sonora nostálgica</li>
+                </ul>
+                <table>
+                    <caption><strong>Informações do Vídeo</strong></caption>
+                    <tr>
+                        <th>Duração</th>
+                        <th>Categoria</th>
+                        <th>Likes</th>
+                    </tr>
+                    <tr>
+                        <td>12:08</td>
+                        <td>Jogos</td>
+                        <td>28 mil</td>
+                    </tr>
+                </table>
+                <p><a href="#">Ver mais vídeos do canal</a></p>
+                <!-- Exemplo de áudio relacionado ao vídeo -->
+                <audio controls style="width:100%; margin: 10px 0;">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento <code>audio</code>.
+                </audio>
+                <p style="color:#ccc; font-size:0.95em;">Ouça um trecho da trilha sonora clássica!</p>
+            </section>
+            <!-- Formulário de comentário -->
+            <section style="margin-top: 30px;">
+                <h2 style="font-size:1.1em; margin-bottom:10px;">Deixe seu comentário</h2>
+                <form style="background:#222; padding:15px; border-radius:8px;" autocomplete="off">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required style="width:100%;margin-bottom:10px;"><br>
+                    <label for="comentario">Comentário:</label><br>
+                    <textarea id="comentario" name="comentario" rows="3" required
+                        style="width:100%;margin-bottom:10px;"></textarea><br>
+                    <label for="nota">Nota para o vídeo:</label>
+                    <select id="nota" name="nota" style="margin-left:10px;">
+                        <option value="5">5 - Excelente</option>
+                        <option value="4">4 - Muito bom</option>
+                        <option value="3">3 - Bom</option>
+                        <option value="2">2 - Regular</option>
+                        <option value="1">1 - Ruim</option>
+                    </select><br><br>
+                    <button type="submit"
+                        style="background:#ff0000;color:#fff;padding:8px 18px;border:none;border-radius:4px;cursor:pointer;">Enviar</button>
+                </form>
+            </section>
+        </section>
+        <aside>
+            <section class="sidebar">
+                <h2>Próximos vídeos</h2>
+                <ul>
+                    <li><a href="#">Top Gear (SNES) - Part 2: South America</a></li>
+                    <li><a href="#">Super Mario World - Primeira Fase</a></li>
+                    <li><a href="#">Street Fighter II - Champion Edition</a></li>
+                    <li><a href="#">Pacote SNES: Os Top 5</a></li>
+                    <li><a href="#">Trilha Sonora Top Gear (Original)</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2025 YouTube Simples. Inspirado em <a href="https://www.youtube.com/" style="color:#ff0000;">YouTube</a>.
+    </footer>
+</body>
+
+</html>
