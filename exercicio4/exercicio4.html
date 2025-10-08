@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Simples - Top Gear (SNES)</title>
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="estilo-exercicio4.css">
+    <!-- CSS Interno: sobrescreve cor do header e destaca formulário -->
+    <style>
+        header {
+            background: #181818;
+            border-bottom: 4px solid #ff0000;
+        }
+
+        form.comentario {
+            box-shadow: 0 2px 12px #0006;
+            border: 2px solid #ff0000;
+        }
+
+        /* Exemplo de seletor combinado: destaca o primeiro item da lista de vídeos sugeridos */
+        .sidebar ul li:first-child a {
+            background: #ff0000;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="logo"
+            style="border:2px solid #fff; padding:2px 10px; border-radius:8px; background:#ff0000; color:#fff;">YouTube</span>
+        <nav>
+            <a href="#" style="font-weight:bold;">Início</a>
+            <a href="#">Explorar</a>
+            <a href="#">Inscrições</a>
+        </nav>
+    </header>
+    <main>
+        <section class="video-section">
+            <div class="video-player" style="border:4px solid #fff; box-sizing:border-box;">
+                <!-- Exemplo de vídeo incorporado -->
+                <video width="100%" controls
+                    poster="https://gamefabrique.com/storage/screenshots/snes/top-gear-1-11.png"
+                    style="border-radius:8px; box-shadow:0 2px 8px #0008;">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento <code>video</code>.
+                </video>
+            </div>
+            <!-- Imagem ilustrativa do vídeo -->
+            <figure
+                style="margin: 10px 0; text-align:center; border:2px dashed #ff0000; padding:8px; border-radius:8px; background:#222;">
+                <img src="https://gamefabrique.com/storage/screenshots/snes/top-gear-1-11.png" alt="Top Gear SNES"
+                    style="max-width: 80%; border-radius: 8px; box-shadow: 0 2px 8px #0008; border:3px solid #fff;">
+                <figcaption style="color:#ccc; font-size:0.95em;">Imagem ilustrativa do jogo Top Gear (SNES)
+                </figcaption>
+            </figure>
+            <section class="video-info">
+                <h1>Top Gear (SNES) - Part 1: USA</h1>
+                <p><strong>Canal:</strong> MetaSmashterGaming</p>
+                <p><strong>Visualizações:</strong> 2,2 mi &nbsp; <strong>Publicado:</strong> há 14 anos</p>
+                <p>Top Gear (SNES) é um clássico dos jogos de corrida, famoso por sua jogabilidade e trilha sonora
+                    marcante. Neste vídeo, confira a primeira pista do jogo!</p>
+                <ul>
+                    <li>Corrida nos EUA</li>
+                    <li>Modo multiplayer</li>
+                    <li>Trilha sonora nostálgica</li>
+                </ul>
+                <table>
+                    <caption><strong>Informações do Vídeo</strong></caption>
+                    <tr>
+                        <th>Duração</th>
+                        <th>Categoria</th>
+                        <th>Likes</th>
+                    </tr>
+                    <tr>
+                        <td>12:08</td>
+                        <td>Jogos</td>
+                        <td>28 mil</td>
+                    </tr>
+                </table>
+                <p><a href="#">Ver mais vídeos do canal</a></p>
+                <!-- Exemplo de áudio relacionado ao vídeo -->
+                <audio controls style="width:100%; margin: 10px 0;">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento <code>audio</code>.
+                </audio>
+                <p style="color:#ccc; font-size:0.95em;">Ouça um trecho da trilha sonora clássica!</p>
+            </section>
+            <!-- Formulário de comentário -->
+            <section style="margin-top: 30px;">
+                <h2 style="font-size:1.1em; margin-bottom:10px;">Deixe seu comentário</h2>
+                <form class="comentario"
+                    style="background:#222; padding:15px; border-radius:8px; margin-bottom:20px; box-sizing:border-box;"
+                    autocomplete="off">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required
+                        style="width:100%;margin-bottom:10px; box-sizing:border-box; border:1px solid #ff0000; padding:6px;">
+                    <br>
+                    <label for="comentario">Comentário:</label><br>
+                    <textarea id="comentario" name="comentario" rows="3" required
+                        style="width:100%;margin-bottom:10px; box-sizing:border-box; border:1px solid #ff0000; padding:6px;"></textarea><br>
+                    <label for="nota">Nota para o vídeo:</label>
+                    <select id="nota" name="nota" style="margin-left:10px; border:1px solid #ff0000; padding:4px;">
+                        <option value="5">5 - Excelente</option>
+                        <option value="4">4 - Muito bom</option>
+                        <option value="3">3 - Bom</option>
+                        <option value="2">2 - Regular</option>
+                        <option value="1">1 - Ruim</option>
+                    </select><br><br>
+                    <button type="submit"
+                        style="background:#ff0000;color:#fff;padding:8px 18px;border:none;border-radius:4px;cursor:pointer; box-shadow:0 2px 6px #0006;">Enviar</button>
+                </form>
+            </section>
+        </section>
+        <aside>
+            <section class="sidebar">
+                <h2>Próximos vídeos</h2>
+                <ul>
+                    <li><a href="#">Top Gear (SNES) - Part 2: South America</a></li>
+                    <li><a href="#">Super Mario World - Primeira Fase</a></li>
+                    <li><a href="#">Street Fighter II - Champion Edition</a></li>
+                    <li><a href="#">Pacote SNES: Os Top 5</a></li>
+                    <li><a href="#">Trilha Sonora Top Gear (Original)</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2025 YouTube Simples. Inspirado em <a href="https://www.youtube.com/" style="color:#ff0000;">YouTube</a>.
+    </footer>
+</body>
+
+</html>

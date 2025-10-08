@@ -1,0 +1,94 @@
+/* CSS Externo: Seletores básicos, combinados e box model */
+
+body {
+    background: #181818;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+.video-section {
+    flex: 2;
+}
+
+.video-player {
+    background: #000;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* Box model: borda, padding, margin */
+    border: 4px solid #ff0000;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.video-info h1 {
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+}
+
+.video-info p {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+}
+
+.video-info ul {
+    margin: 0 0 10px 20px;
+}
+
+.video-info table {
+    background: #222;
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video-info th,
+.video-info td {
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+aside {
+    flex: 1;
+}
+
+.sidebar h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+footer {
+    background: #202020;
+    color: #aaa;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
