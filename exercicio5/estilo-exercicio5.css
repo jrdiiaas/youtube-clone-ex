@@ -1,0 +1,286 @@
+/* ------------------- */
+/* RESET E ESTILOS GLOBAIS */
+/* ------------------- */
+:root {
+    --background-color: #181818;
+    --surface-color: #282828;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #aaaaaa;
+    --accent-color: #ff0000;
+    --border-color: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* ------------------- */
+/* CABEÇALHO */
+/* ------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left,
+.header-right,
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--accent-color);
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    background-color: #121212;
+    color: var(--primary-text-color);
+    border-radius: 20px 0 0 20px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+
+.header i {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Esconder a barra de pesquisa em telas muito pequenas */
+.header-center {
+    flex-grow: 1;
+    /* Faz a barra de pesquisa ocupar o espaço */
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+
+    .search-bar,
+    .search-button {
+        display: none;
+    }
+}
+
+
+/* ------------------- */
+/* LAYOUT PRINCIPAL (MOBILE-FIRST) */
+/* ------------------- */
+.main-container {
+    padding: 20px;
+    /* Grid para o layout principal */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Uma coluna por padrão (mobile) */
+    gap: 20px;
+}
+
+/* ------------------- */
+/* SEÇÃO DO VÍDEO */
+/* ------------------- */
+.video-player-container {
+    width: 100%;
+    background-color: #000;
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Mantém a proporção do vídeo */
+    border-radius: 8px;
+}
+
+.video-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+    /* Empilhado em mobile */
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.channel-avatar {
+    font-size: 2.5em;
+}
+
+.channel-name {
+    font-weight: bold;
+    display: block;
+}
+
+.channel-subscribers {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+.subscribe-button {
+    background-color: var(--accent-color);
+    color: var(--primary-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+    /* Empurra o botão para a direita */
+}
+
+.video-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.video-actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--surface-color);
+    color: var(--primary-text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.video-description {
+    background-color: var(--surface-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-description p {
+    line-height: 1.6;
+}
+
+/* ------------------- */
+/* SEÇÃO DE COMENTÁRIOS */
+/* ------------------- */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    font-size: 1em;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    /* Alinha o botão à direita */
+    background-color: var(--accent-color);
+    color: var(--primary-text-color);
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ------------------- */
+/* BARRA LATERAL */
+/* ------------------- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.suggested-video {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 168px;
+    height: 94px;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Efeitos de transição para a imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.suggested-video:hover .thumbnail {
+    /* Efeitos visuais em hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.suggested-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.suggested-channel,
+.suggested-views {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    display: block;
+}
+
+/* ------------------- */
+/* MEDIA QUERY PARA DESKTOP */
+/* ------------------- */
+@media (min-width: 992px) {
+
+    /* Altera o layout para 2 colunas */
+    .main-container {
+        grid-template-columns: 2fr 1fr;
+        /* Proporção de 2/3 para o vídeo e 1/3 para a sidebar */
+        padding: 25px 50px;
+        /* Mais espaçamento em telas maiores */
+    }
+
+    .video-details {
+        flex-direction: row;
+        /* Alinha itens lado a lado */
+        justify-content: space-between;
+        align-items: center;
+    }
+}

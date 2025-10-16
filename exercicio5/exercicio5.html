@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Simples - Top Gear (SNES)</title>
+    <!-- Link para a nova folha de estilos -->
+    <link rel="stylesheet" href="estilo-exercicio5.css">
+    <!-- Importando ícones para a interface -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="header-left">
+            <i class="fas fa-bars menu-icon"></i>
+            <span class="logo">YouTube</span>
+        </div>
+        <div class="header-center">
+            <input type="text" class="search-bar" placeholder="Pesquisar">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-right">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-container">
+        <main class="video-content">
+            <!-- PLAYER DE VÍDEO -->
+            <div class="video-player-container">
+                <video class="video-player" controls
+                    poster="https://gamefabrique.com/storage/screenshots/snes/top-gear-1-11.png">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento <code>video</code>.
+                </video>
+            </div>
+
+            <!-- INFORMAÇÕES DO VÍDEO -->
+            <section class="video-info">
+                <h1 class="video-title">Top Gear (SNES) - Part 1: USA</h1>
+                <div class="video-details">
+                    <div class="channel-info">
+                        <i class="fas fa-user-circle channel-avatar"></i>
+                        <div>
+                            <span class="channel-name">MetaSmashterGaming</span>
+                            <span class="channel-subscribers">1 mi de inscritos</span>
+                        </div>
+                        <button class="subscribe-button">Inscrever-se</button>
+                    </div>
+                    <div class="video-actions">
+                        <button><i class="fas fa-thumbs-up"></i> 28 mil</button>
+                        <button><i class="fas fa-thumbs-down"></i></button>
+                        <button><i class="fas fa-share"></i> Compartilhar</button>
+                        <button><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DESCRIÇÃO DO VÍDEO -->
+            <section class="video-description">
+                <p><strong>2,2 mi de visualizações &nbsp; há 14 anos</strong></p>
+                <p>
+                    Top Gear (SNES) é um clássico dos jogos de corrida, famoso por sua jogabilidade e trilha sonora
+                    marcante.
+                    Neste vídeo, confira a primeira pista do jogo!
+                </p>
+            </section>
+
+            <!-- SEÇÃO DE COMENTÁRIOS -->
+            <section class="comments-section">
+                <h2>Deixe seu comentário</h2>
+                <form class="comment-form">
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <textarea id="comment" name="comment" rows="3" placeholder="Seu comentário..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- BARRA LATERAL COM VÍDEOS SUGERIDOS -->
+        <aside class="sidebar">
+            <div class="suggested-video">
+                <img src="https://placehold.co/168x94/2a2a2a/ffffff?text=Video+1" alt="Miniatura do vídeo"
+                    class="thumbnail">
+                <div class="suggested-video-info">
+                    <h3 class="suggested-title">Top Gear (SNES) - Part 2: South America</h3>
+                    <span class="suggested-channel">MetaSmashterGaming</span>
+                    <span class="suggested-views">1.8 mi de visualizações</span>
+                </div>
+            </div>
+            <div class="suggested-video">
+                <img src="https://placehold.co/168x94/2a2a2a/ffffff?text=Video+2" alt="Miniatura do vídeo"
+                    class="thumbnail">
+                <div class="suggested-video-info">
+                    <h3 class="suggested-title">Super Mario World - Primeira Fase</h3>
+                    <span class="suggested-channel">RetroGamer BR</span>
+                    <span class="suggested-views">5.1 mi de visualizações</span>
+                </div>
+            </div>
+            <div class="suggested-video">
+                <img src="https://placehold.co/168x94/2a2a2a/ffffff?text=Video+3" alt="Miniatura do vídeo"
+                    class="thumbnail">
+                <div class="suggested-video-info">
+                    <h3 class="suggested-title">Street Fighter II - Champion Edition</h3>
+                    <span class="suggested-channel">Arcade Classics</span>
+                    <span class="suggested-views">3.4 mi de visualizações</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>
